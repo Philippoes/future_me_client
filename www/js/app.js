@@ -21,4 +21,14 @@ angular.module('starter', ['ionic'])
       StatusBar.styleDefault();
     }
   });
-})
+});
+
+$rootScope.global = {
+  theme: {
+    primary_color: '#28A249', //'#4a87ee',
+    additional_color: '#248E44', //'#0c63ee',
+    text_color: '#fff',
+    logo: $localstorage.get('last_logo') || './img/Bagare2.jpg'
+  }
+}
+
