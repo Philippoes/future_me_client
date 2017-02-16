@@ -4,7 +4,9 @@ angular.module('futureme.controllers', [])
 
     var cardTypes = [{title: "bagare", image: "chef.png"},
       {title: "sjuksköterska", image: "nurse.png"},
-      {title: "läkare", image: "nurse.png"}];
+      {title: "läkare", image: "nurse.png"},
+      {title: "Undersköterska", image: "nurse.png"},
+      {title: "Psykolog", image: "nurse.png"}];
 
     $scope.cards = {
       master: Array.prototype.slice.call(cardTypes, 0),
