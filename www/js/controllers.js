@@ -1,4 +1,4 @@
-angular.module('future_me', ['ionic'])
+angular.module('futureme.controllers', [])
 
   .run(function($state, $rootScope) {
     $rootScope.$on('$stateChangeSuccess', function (evt, toState) {
@@ -11,4 +11,12 @@ angular.module('future_me', ['ionic'])
     });
   });
 
+  .controller('cardsCtrl', function ($scope, TDCardDelegate) {
+
+    $scope.cards = [
+      {title: "bagare", image: "chef.png"},
+      {title: "sjuksköterska", image: "nurse.png"}
+    ]
+
+  });
 

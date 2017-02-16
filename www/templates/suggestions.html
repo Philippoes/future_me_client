@@ -1,0 +1,25 @@
+<ion-view>
+  <ion-content>
+    <td-cards>
+      <td-card ng-repeat="card in cards">
+        <div class="row card-image" style="background-image: url('img/{{card.image}}');">
+          <div class="col">
+            <div class="row suggestion-title-row">
+              <div class="col">
+                <h4 class="suggestion-title">Vill du bli {{card.title}}?</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col button-group">
+            <button class="button button-assertive icon ion-close"></button>
+            <button class="button button-royal icon ion-map"></button>
+            <button class="button button-positive icon ion-information"></button>
+            <button class="button button-balanced icon ion-heart"></button>
+          </div>
+        </div>
+      </td-card>
+    </td-cards>
+  </ion-content>
+</ion-view>

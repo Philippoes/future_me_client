@@ -1,9 +1,11 @@
-// Ionic future_me App
+// Ionic futureme App
 
 // angular.module is a global place for creating, registering and retrieving Angular modules
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
-angular.module('future_me', ['ionic'])
+
+angular.module('futureme', ['ionic', 'futureme.controllers', 'ionic.contrib.ui.tinderCards'])
+
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -23,6 +25,7 @@ angular.module('future_me', ['ionic'])
   });
 })
 
+
 .config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
 
@@ -35,3 +38,18 @@ angular.module('future_me', ['ionic'])
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/path');
 });
+
+
+  .config(function($stateProvider, $urlRouterProvider) {
+    $stateProvider
+
+      .state('suggestions', {
+        url: '/suggestions',
+        templateUrl: 'templates/suggestions.html',
+        controller: 'cardsCtrl'
+      });
+
+    // if none of the above states are matched, use this as the fallback
+    $urlRouterProvider.otherwise('/suggestions');
+  });
+
