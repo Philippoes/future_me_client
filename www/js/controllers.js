@@ -11,9 +11,12 @@ angular.module('futureme.controllers', [])
     $scope.cards = {
       master: Array.prototype.slice.call(cardTypes, 0),
       active: Array.prototype.slice.call(cardTypes, 0),
-      discards: [],
       liked: [],
       disliked: []
+    };
+
+    $scope.cardDestroyed = function(index) {
+      $scope.cards.active.splice(index, 1);
     };
 
     $scope.addCard = function () {
@@ -27,11 +30,6 @@ angular.module('futureme.controllers', [])
         $scope.cards.active = Array.prototype.slice.call($scope.cards.master, 0);
       });
     };
-
-    $scope.$on('removeCard', function (event, element, card) {
-      var discarded = $scope.cards.master.splice($scope.cards.master.indexOf(card), 1);
-      $scope.cards.discards.push(discarded);
-    });
 
     $scope.cardSwipedLeft = function (index) {
       console.log('LEFT SWIPE');
