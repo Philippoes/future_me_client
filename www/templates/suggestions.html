@@ -1,7 +1,7 @@
 <ion-view>
   <ion-content>
     <td-cards>
-      <td-card ng-repeat="card in cards">
+      <td-card ng-repeat="card in job.cards" on-destroy="cardDestroyed()">
         <div class="row card-image" style="background-image: url('img/{{card.image}}');">
           <div class="col">
             <div class="row suggestion-title-row">
