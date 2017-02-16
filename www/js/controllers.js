@@ -10,7 +10,7 @@ angular.module('futureme.controllers', [])
 
     $scope.cards = {
       master: Array.prototype.slice.call(cardTypes, 0),
-      active: Array.prototype.slice.call(cardTypes, 0),
+      active: Array.prototype.slice.call(cardTypes, 0)
     };
 
     $scope.cardDestroyed = function(index) {
