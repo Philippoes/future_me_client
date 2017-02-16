@@ -4,27 +4,25 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 
-angular.module('futureme', ['ionic', 'futureme.controllers', 'ionic.contrib.ui.tinderCards'])
+angular.module('futureme', ['ionic', 'future_me.controllers', 'ionic.contrib.ui.tinderCards'])
 
+  .run(function($ionicPlatform) {
+    $ionicPlatform.ready(function() {
+      if (window.cordova && window.cordova.plugins.Keyboard) {
+        // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
+        // for form inputs)
+        cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
 
-.run(function($ionicPlatform) {
-  $ionicPlatform.ready(function() {
-    if(window.cordova && window.cordova.plugins.Keyboard) {
-      // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
-      // for form inputs)
-      cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
-
-      // Don't remove this line unless you know what you are doing. It stops the viewport
-      // from snapping when text inputs are focused. Ionic handles this internally for
-      // a much nicer keyboard experience.
-      cordova.plugins.Keyboard.disableScroll(true);
-    }
-    if(window.StatusBar) {
-      StatusBar.styleDefault();
-    }
-  });
-})
-
+        // Don't remove this line unless you know what you are doing. It stops the viewport
+        // from snapping when text inputs are focused. Ionic handles this internally for
+        // a much nicer keyboard experience.
+        cordova.plugins.Keyboard.disableScroll(true);
+      }
+      if (window.StatusBar) {
+        StatusBar.styleDefault();
+      }
+    });
+  })
 
 .config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
@@ -41,15 +39,22 @@ angular.module('futureme', ['ionic', 'futureme.controllers', 'ionic.contrib.ui.t
 
 
   .config(function($stateProvider, $urlRouterProvider) {
+
     $stateProvider
 
-      .state('suggestions', {
-        url: '/suggestions',
-        templateUrl: 'templates/suggestions.html',
-        controller: 'cardsCtrl'
-      });
+    .state('suggestions', {
+      url: '/suggestions',
+      templateUrl: 'templates/suggestions.html',
+      controller: 'cardsCtrl'
+    })
 
-    // if none of the above states are matched, use this as the fallback
-    $urlRouterProvider.otherwise('/suggestions');
+    .state('description', {
+      url: '/description',
+      templateUrl: 'templates/description/description.html',
+      controller: 'DescriptionController'
+    });
+
+    $urlRouterProvider.otherwise('description');
+
   });
 

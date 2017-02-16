@@ -1,4 +1,4 @@
-angular.module('futureme.controllers', [])
+angular.module('future_me.controllers', [])
 
   .run(function($state, $rootScope) {
     $rootScope.$on('$stateChangeSuccess', function (evt, toState) {
@@ -14,9 +14,12 @@ angular.module('futureme.controllers', [])
   .controller('cardsCtrl', function ($scope, TDCardDelegate) {
 
     $scope.cards = [
-      {title: "bagare", image: "chef.png"},
+      {title: "bagare", image: "chef.jpg"},
       {title: "sjuksköterska", image: "nurse.png"}
-    ]
+    ];
+  })
 
+  .controller('DescriptionController', function() {
+    console.log('description controller');
   });
 

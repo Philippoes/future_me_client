@@ -1,4 +1,48 @@
-/* Empty. Add your own CSS if you like */
+.pane {
+  background-image: url('../img/chef.jpg');
+  overflow: hidden;
+  background-size: cover;
+}
+
+.title {
+  color: ivory;
+}
+
+.col-80 {
+  color: white;
+  font-size: 30px;
+  padding-left: 30px;
+}
+
+.col-90 {
+  color: white;
+  height: 270px;
+  font-size: 20px;
+  padding-left: 30px;
+}
+
+.top-space {
+  padding-top: 100px;
+}
+
+.row+.row {
+  margin-top: 30px;
+  padding-top: 0;
+}
+
+.button-dark {
+  margin: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.button-group {
+  width: 200px;
+  margin-top: 1rem;
+  margin-bottom: 50px;
+  margin-left: 50px;
+  margin-right: 50px;
+  text-align: center;
 
 .item.item-trns {
   border-color: rgba(0, 0, 0, 0);
@@ -138,11 +182,6 @@ td-card img {
   height: 4.5rem;
   margin-left: 0.25rem;
   margin-right: 0.25rem;
-}
-
-.button-group {
-  text-align: center;
-  margin-top: 1rem;
 }
 
 .suggestion-title-row {
