@@ -29,7 +29,7 @@ Fork the project. run npm install and bower install.
 ## Built With
 
   * [Travis](https://travis-ci.org) - Used for continous integration
-  * [ionic-ion-tinder-cards] (https://github.com/driftyco/ionic-ion-tinder-cards/) - Used for implementing the tinder cards functionality
+  * [ionic-ion-tinder-cards-2] (https://github.com/loringdodge/ionic-ion-tinder-cards-2) - Used for implementing the tinder cards functionality
 
 ## Authors
   * **Craft Academy** - [CraftAcademy](https://github.com/CraftAcademy)
