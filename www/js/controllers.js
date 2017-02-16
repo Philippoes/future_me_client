@@ -1,4 +1,4 @@
-angular.module('future_me', ['ionic'])
+angular.module('futureme', ['ionic'])
 
   .run(function($state, $rootScope) {
     $rootScope.$on('$stateChangeSuccess', function (evt, toState) {
@@ -10,5 +10,7 @@ angular.module('future_me', ['ionic'])
       }
     });
   });
+
+
 
 

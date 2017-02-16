@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-html ng-app="future_me">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
@@ -19,6 +18,8 @@ html ng-app="future_me">
 
     <ion-side-menu-content>
       <ion-nav-bar class="bar-positive" ng-class="{'bar-custom' : headerChangeColor}">
+        <ion-nav-back-button>
+        </ion-nav-back-button>
 
         <ion-nav-buttons side="left">
           <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
@@ -33,9 +34,34 @@ html ng-app="future_me">
       <ion-header-bar class="bar-assertive">
         <h1 class="title">Left Menu</h1>
       </ion-header-bar>
+      <ion-content>
+        <ul class="list">
+          <!-- Note each link has the 'menu-close' attribute so the menu auto closes when clicking on one of these links -->
+          <a href="#/home" class="item" menu-close>Home</a>
+          <a href="#/event/check-in" class="item" menu-close>Check-in</a>
+          <a href="#/event/attendees" class="item" menu-close>Attendees</a>
+        </ul>
+      </ion-content>
     </ion-side-menu>
 
   </ion-side-menus>
+</script>
+
+<script id="templates/home.html" type="text/ng-template">
+  <ion-view view-title="Welcome">
+    <ion-content class="padding">
+      <p>Click the link below, or navigate to the &quot;Attendees&quot; page to change the header bar color</p>
+      <a ui-sref="eventmenu.home2">Next View (Change Header Bar Color)</a>
+    </ion-content>
+  </ion-view>
+</script>
+
+<script id="templates/home2.html" type="text/ng-template">
+  <ion-view view-title="New Color">
+    <ion-content class="padding">
+      <h2>Nifty huh?</h2>
+    </ion-content>
+  </ion-view>
 </script>
 
 </body>
@@ -86,13 +112,19 @@ html ng-app="future_me">
     <script src="js/controllers.js"></script>
 
   </head>
-  <body ng-app="future_me">
+  <body ng-app="futureme">
   <ion-pane>
       <ion-header-bar class="bar-stable">
-        <h1 class="title">Bli en bagare</h1>
+        <div class="bar bar-header">
+          <button class="button button-icon icon ion-navicon"></button>
+          <div class="h1 title"></div>
+          <button class="button button-clear button">Future me</button>
+        </div>
       </ion-header-bar>
     <ion-item class="item item-trns text-center">
       </br>
+      </br>
+      <h1>Bli en bagare</h1>
       </br>
       </br>
       Börja här!
