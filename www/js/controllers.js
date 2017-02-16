@@ -11,8 +11,6 @@ angular.module('futureme.controllers', [])
     $scope.cards = {
       master: Array.prototype.slice.call(cardTypes, 0),
       active: Array.prototype.slice.call(cardTypes, 0),
-      liked: [],
-      disliked: []
     };
 
     $scope.cardDestroyed = function(index) {
@@ -32,17 +30,11 @@ angular.module('futureme.controllers', [])
     };
 
     $scope.cardSwipedLeft = function (index) {
-      console.log('LEFT SWIPE');
-      var card = $scope.cards.active[index];
-      $scope.cards.disliked.push(card);
       if (index === $scope.cards.active.length - 1)
         $scope.refreshCards();
     };
 
     $scope.cardSwipedRight = function (index) {
-      console.log('RIGHT SWIPE');
-      var card = $scope.cards.active[index];
-      $scope.cards.liked.push(card);
       if (index === $scope.cards.active.length - 1)
         $scope.refreshCards();
     };
