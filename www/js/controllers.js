@@ -1,4 +1,4 @@
-angular.module('futureme', ['ionic'])
+angular.module('futureme.controllers', [])
 
   .run(function($state, $rootScope) {
     $rootScope.$on('$stateChangeSuccess', function (evt, toState) {
@@ -9,8 +9,17 @@ angular.module('futureme', ['ionic'])
         $rootScope.headerChangeColor = false;
       }
     });
+  })
+
+  .controller('cardsCtrl', function ($scope, TDCardDelegate) {
+
+    $scope.cards = [
+      {title: "bagare", image: "chef.jpg"},
+      {title: "sjuksköterska", image: "nurse.png"}
+    ];
+  })
+
+  .controller('DescriptionController', function() {
+    console.log('description controller');
   });
-
-
-
 
