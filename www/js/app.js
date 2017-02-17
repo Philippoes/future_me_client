@@ -3,7 +3,7 @@
 // angular.module is a global place for creating, registering and retrieving Angular modules
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
-angular.module('futureme', ['ionic', 'futureme.controllers', 'ionic.contrib.ui.tinderCards2'])
+angular.module('futureme', ['ionic', 'futureme.controllers', 'futureme.directives', 'ionic.contrib.ui.tinderCards2'])
 
   .directive('noScroll', function ($document) {
 
@@ -47,7 +47,7 @@ angular.module('futureme', ['ionic', 'futureme.controllers', 'ionic.contrib.ui.t
 
 
       .state('description', {
-        url: '/description',
+        url: '/description/:id',
         templateUrl: 'templates/description/description.html',
         controller: 'DescriptionController'
 
