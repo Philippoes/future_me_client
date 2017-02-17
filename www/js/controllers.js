@@ -57,7 +57,9 @@ angular.module('futureme.controllers', [])
   .controller('cardCtrl', function ($scope, TDCardDelegate) {
   })
 
-.controller('DescriptionController', function($scope, $ionicHistory) {
-  console.log('description controller');
+.controller('descriptionCtrl', function($scope, $ionicHistory) {
+  $scope.myGoBack = function() {
+    $ionicHistory.goBack();
+  };
 });
 

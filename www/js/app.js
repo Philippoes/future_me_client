@@ -48,13 +48,13 @@ angular.module('futureme', ['ionic', 'futureme.controllers', 'futureme.directive
       .state('description', {
         url: '/description',
         templateUrl: 'templates/description/description.html',
-        controller: 'DescriptionController'
+        controller: 'descriptionCtrl'
     })
 
       .state('path', {
         url: '/path',
         templateUrl: 'templates/path.html',
-        controller: 'cardsCtrl'
+        controller: 'pathCtrl'
       });
     $urlRouterProvider.otherwise('/suggestions');
   });
