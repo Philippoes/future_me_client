@@ -127,3 +127,8 @@ td-card img {
 .suggestion-title-row {
   margin-top: 30rem
 }
+
+.refresh-card {
+  background-color: white;
+  height: 40rem;
+}

@@ -15,6 +15,8 @@ angular.module('futureme.controllers', [])
 
     $scope.cardDestroyed = function(index) {
       $scope.cards.active.splice(index, 1);
+      if ($scope.cards.active.length === 0)
+        $scope.refreshCards();
     };
 
     $scope.addCard = function () {
@@ -30,13 +32,9 @@ angular.module('futureme.controllers', [])
     };
 
     $scope.cardSwipedLeft = function (index) {
-      if (index === $scope.cards.active.length - 1)
-        $scope.refreshCards();
     };
 
     $scope.cardSwipedRight = function (index) {
-      if (index === $scope.cards.active.length - 1)
-        $scope.refreshCards();
     };
   })
 
