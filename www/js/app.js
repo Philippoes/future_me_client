@@ -56,5 +56,5 @@ angular.module('futureme', ['ionic', 'futureme.controllers', 'ionic.contrib.ui.t
         templateUrl: 'templates/path.html',
         controller: 'cardsCtrl'
       });
-    $urlRouterProvider.otherwise('/path');
+    $urlRouterProvider.otherwise('/suggestion');
   });
