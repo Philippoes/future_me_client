@@ -2,18 +2,17 @@ angular.module('futureme.controllers', [])
 
   .controller('cardsCtrl', function ($scope, TDCardDelegate, $timeout) {
 
-    var cardTypes = [{title: "bagare", image: "chef.png"},
-      {title: "sjuksköterska", image: "nurse.png"},
-      {title: "läkare", image: "nurse.png"},
-      {title: "Undersköterska", image: "nurse.png"},
-      {title: "psykolog", image: "nurse.png"}];
+    var cardTypes = [{id: 1, title: "bagare", image: "Bagare.png"},
+      {id: 2, title: "sjuksköterska", image: "Sjuksköterska.png"},
+      {id: 3, title: "möbeldesigner", image: "Mobeldes.png"},
+      {id: 4, title: "läkare", image: "Sjuksköterska.png"}];
 
     $scope.cards = {
       master: Array.prototype.slice.call(cardTypes, 0),
       active: Array.prototype.slice.call(cardTypes, 0)
     };
 
-    $scope.cardDestroyed = function(index) {
+    $scope.cardDestroyed = function (index) {
       $scope.cards.active.splice(index, 1);
       if ($scope.cards.active.length === 0)
         $scope.refreshCards();
