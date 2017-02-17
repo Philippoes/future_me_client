@@ -69,7 +69,7 @@ td-card img {
   background-size: cover;
 }
 
-.pane {
+.pane-description {
   overflow: hidden;
   background-size: cover;
 }
@@ -171,4 +171,8 @@ td-card img {
 .button-group_description {
   margin-top: 2rem;
   text-align: center;
+}
+
+.bar-stable-description {
+background-color: transparent;
 }
