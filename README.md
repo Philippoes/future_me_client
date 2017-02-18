@@ -29,7 +29,8 @@ Fork the project. run npm install and bower install.
 ## Built With
 
   * [Travis](https://travis-ci.org) - Used for continous integration
-  * [ionic-ion-tinder-cards-2] (https://github.com/loringdodge/ionic-ion-tinder-cards-2) - Used for implementing the tinder cards functionality
+  * [ionic-ion-tinder-cards-2](https://github.com/loringdodge/ionic-ion-tinder-cards-2) - Used for implementing the tinder cards functionality
+  * [ng-Storage](https://github.com/gsklee/ngStorage) - Used for saving data in local storage, including occupations as default.
 
 ## Authors
   * **Craft Academy** - [CraftAcademy](https://github.com/CraftAcademy)
