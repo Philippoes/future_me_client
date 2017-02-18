@@ -1,6 +1,7 @@
 angular.module('futureme.controllers', [])
 
-  .controller('cardsCtrl', function ($scope, TDCardDelegate, $timeout, $state) {
+  .controller('cardsCtrl', function ($scope, TDCardDelegate, $timeout, $localStorage,
+                                     $sessionStorage) {
 
     var cardTypes = [{
       id: 1,
