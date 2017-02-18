@@ -1,34 +1,15 @@
 angular.module('futureme.controllers', [])
 
-  .controller('cardsCtrl', function ($scope, TDCardDelegate, $timeout, $localStorage,
-                                     $sessionStorage) {
+  .controller('cardsCtrl', function ($scope, TDCardDelegate, $timeout, StorageService) {
 
-    var cardTypes = [{
-      id: 1,
-      title: "bagare",
-      image: "Bagare.png"
-    },
-      {
-        id: 2,
-        title: "sjuksköterska",
-        image: "Sjuksköterska.png"
-      },
-      {
-        id: 3,
-        title: "möbeldesigner",
-        image: "Mobeldes.png"
-      },
-      {
-        id: 4,
-        title: "läkare",
-        image: "Sjuksköterska.png"
-      }
-    ];
+    var cards = StorageService.getAll();
 
     $scope.cards = {
-      master: Array.prototype.slice.call(cardTypes, 0),
-      active: Array.prototype.slice.call(cardTypes, 0)
+      master: Array.prototype.slice.call(cards, 0),
+      active: Array.prototype.slice.call(cards, 0)
     };
+
+    console.log(cards);
 
     $scope.cardDestroyed = function (index) {
       $scope.cards.active.splice(index, 1);
