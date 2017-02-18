@@ -9,8 +9,6 @@ angular.module('futureme.controllers', [])
       active: Array.prototype.slice.call(cards, 0)
     };
 
-    console.log(cards);
-
     $scope.cardDestroyed = function (index) {
       $scope.cards.active.splice(index, 1);
       if ($scope.cards.active.length === 0)
