@@ -96,7 +96,7 @@ td-card img {
 
 .button-group {
   text-align: center;
-  margin-top: 2.4vh;
+  margin-top: 3.2vh;
 }
 
 .ion-ios-bookmarks {
@@ -166,6 +166,11 @@ td-card img {
   margin-right: 0.6vw;
 }
 
+.suggestion-buttons {
+  width: 4rem;
+  height: 4rem;
+}
+
 .go-to-library {
   background-image: url('../img/library.png');
   background-position: center;
@@ -183,7 +188,7 @@ td-card img {
 .ion-description {
   background-image: url('../img/descrlinesw.png');
   background-position: center;
-  background-size: 2.6rem;
+  background-size: 2.3rem;
   background-repeat: no-repeat;
 }
 
