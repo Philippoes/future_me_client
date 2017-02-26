@@ -1,29 +1,34 @@
 <ion-pane ng-controller="cardsCtrl" class="background-grey">
   <ion-nav-bar class='bar-clear'>
     <ion-nav-buttons side="right">
-        <img class="lib-button-suggestion" src="img/library.png" go-click="/library">
+      <img class="lib-button-suggestion" src="img/library.png" go-click="/library">
     </ion-nav-buttons>
   </ion-nav-bar>
   <div ng-if="cards.active">
     <td-cards>
-      <td-card ng-repeat="card in cards.active" on-destroy="cardDestroyed($index)" on-swipe-left="cardSwipedLeft($index)" on-swipe-right="cardSwipedRight($index)">
-          <div class="row card-image" style="background-image: url('img/{{card.image}}');">
-            <div class="col">
-              <div class="row suggestion-title-row sluta-braka">
-                <div class="col">
-                  <h4 class="suggestion-title">Vill du bli {{card.title}}?</h4>
-                </div>
+      <td-card ng-repeat="card in cards.active" on-destroy="cardDestroyed($index)"
+               on-swipe-left="cardSwipedLeft($index)" on-swipe-right="cardSwipedRight($index)">
+        <div class="row card-image" style="background-image: url('img/{{card.image}}');">
+          <div class="col">
+            <div class="row suggestion-title-row sluta-braka">
+              <div class="col">
+                <h4 class="suggestion-title">Vill du bli {{card.title}}?</h4>
               </div>
             </div>
           </div>
-          <div class="row">
-            <div class="col button-group">
-              <button id="skip_button" class="button button-assertive icon ion-close" ng-click="onClickTransitionOut(card)"></button>
-              <button class="button button-royal icon ion-footprint" go-click="/path/{{card.id}}"></button>
-              <button class="button button-positive icon ion-description" go-click="/description/{{card.id}}"></button>
-              <button class="button button-balanced icon ion-heart" ng-click="saveThisOccupation(card); onClickTransitionOut(card)"></button>
-            </div>
+        </div>
+        <div class="row">
+          <div class="col button-group">
+            <button id="skip_button" class="button button-assertive suggestion-buttons icon ion-close"
+                    ng-click="onClickTransitionOut(card)"></button>
+            <button class="button button-royal suggestion-buttons icon ion-footprint"
+                    go-click="/path/{{card.id}}"></button>
+            <button class="button button-positive suggestion-buttons icon ion-description"
+                    go-click="/description/{{card.id}}"></button>
+            <button class="button button-balanced suggestion-buttons icon ion-heart"
+                    ng-click="saveThisOccupation(card); onClickTransitionOut(card)"></button>
           </div>
+        </div>
       </td-card>
       <td-card>
         <div class="row refresh-card">
